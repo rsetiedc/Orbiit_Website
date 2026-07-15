@@ -18,3 +18,6 @@ The official website for **ORBIIT** (Rajagiri Entrepreneurship & Innovation Deve
 - `3D-animation.html`: 3D animation demo page.
 - `styles.css` / `script.js`: Styling and interactive components.
 - `assets/`: Media files and other static assets.
+
+
+The deployed link of this website is : https://rajagiriorbiit.netlify.app
