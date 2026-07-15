@@ -269,6 +269,161 @@
             background: rgba(220, 53, 69, 0.2) !important;
         }
 
+        /* ===== FILTER BAR ===== */
+        .filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 0 auto 30px;
+            padding: 12px 20px;
+            background: #fff;
+            border: 3px solid #333;
+            max-width: 900px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .filter-tab {
+            padding: 8px 18px;
+            border: 2px solid #333;
+            background: transparent;
+            color: #333;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            letter-spacing: 0.5px;
+            font-family: inherit;
+        }
+
+        .filter-tab:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .filter-tab.active {
+            background: #333;
+            color: #fff;
+        }
+
+        .filter-tab.active-all {
+            background: #333;
+            color: #fff;
+        }
+
+        .filter-tab.active-active {
+            background: #28a745;
+            color: #fff;
+            border-color: #28a745;
+        }
+
+        .filter-tab.active-exited {
+            background: #dc3545;
+            color: #fff;
+            border-color: #dc3545;
+        }
+
+        .filter-search {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            min-width: 0;
+            position: relative;
+        }
+
+        .filter-search i {
+            position: absolute;
+            left: 12px;
+            color: #999;
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
+
+        .filter-search input {
+            width: 100%;
+            padding: 9px 12px 9px 34px;
+            border: 2px solid #333;
+            font-size: 0.85rem;
+            font-family: inherit;
+            background: #fafafa;
+            transition: all 0.25s ease;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .filter-search input:focus {
+            background: #fff;
+            box-shadow: inset 3px 3px 0px #333;
+        }
+
+        .filter-search input::placeholder {
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+
+        .filter-count {
+            font-size: 0.75rem;
+            color: #888;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* ===== FILTER BAR MOBILE ===== */
+        @media (max-width: 768px) {
+            .filter-bar {
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 12px;
+                margin: 0 0 25px;
+            }
+
+            .filter-tabs {
+                width: 100%;
+                gap: 5px;
+            }
+
+            .filter-tab {
+                flex: 1;
+                text-align: center;
+                padding: 8px 6px;
+                font-size: 0.65rem;
+            }
+
+            .filter-search {
+                width: 100%;
+                order: 2;
+            }
+
+            .filter-search input {
+                padding: 8px 10px 8px 32px;
+                font-size: 0.8rem;
+            }
+
+            .filter-count {
+                width: 100%;
+                text-align: center;
+                order: 3;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .filter-bar {
+                padding: 10px;
+                gap: 8px;
+            }
+
+            .filter-tab {
+                padding: 7px 4px;
+                font-size: 0.6rem;
+            }
+        }
+
         .status-legend {
             display: flex;
             justify-content: center;
@@ -305,7 +460,159 @@
         .legend-box.exited {
             background-color: #dc3545;
         }
-    </style>
+        /* ===== MOBILE RESPONSIVE: STARTUP DETAILS ===== */
+    @media (max-width: 768px) {
+        .cms-hero {
+            padding: 70px 15px 50px;
+        }
+
+        .cms-title {
+            font-size: clamp(1.8rem, 7vw, 2.5rem);
+        }
+
+        .cms-subtitle {
+            font-size: 1rem;
+        }
+
+        .cms-section {
+            padding: 40px 15px;
+        }
+
+        .startup-card {
+            padding: 20px;
+            padding-top: 50px;
+            padding-left: 20px;
+            min-height: auto;
+            gap: 8px;
+        }
+
+        .startup-number {
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            font-size: 2rem;
+        }
+
+        .startup-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px #333;
+        }
+
+        .startup-card h3 {
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+
+        .startup-tag {
+            font-size: 0.65rem;
+            padding: 3px 10px;
+        }
+
+        .startup-desc {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .status-badge {
+            font-size: 0.65rem;
+            padding: 3px 8px;
+        }
+
+        .startup-card .btn {
+            padding: 8px 14px;
+            font-size: 0.7rem;
+            width: auto;
+            max-width: none;
+        }
+
+        .startup-link {
+            font-size: 0.8rem;
+        }
+
+        .status-legend {
+            gap: 12px;
+            padding: 10px 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+
+        .legend-item {
+            font-size: 0.7rem;
+            gap: 6px;
+        }
+
+        .legend-box {
+            width: 16px;
+            height: 16px;
+        }
+
+        .modal-content {
+            margin: 15% auto;
+            padding: 20px;
+            width: 92%;
+            box-shadow: 8px 8px 0px #333;
+        }
+
+        .close-modal {
+            right: 10px;
+            top: 5px;
+            font-size: 28px;
+        }
+
+        .modal-details .detail-item {
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+        }
+
+        .detail-label {
+            font-size: 0.7rem;
+        }
+
+        .detail-value {
+            font-size: 0.95rem;
+        }
+
+        .startup-card .btn,
+        .startup-link {
+            margin-top: 5px;
+        }
+
+        .startup-card div[style*="display:flex"] {
+            gap: 10px !important;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    /* Extra small devices (phones < 400px) */
+    @media (max-width: 400px) {
+        .startup-card {
+            padding: 15px;
+            padding-top: 45px;
+            padding-left: 15px;
+        }
+
+        .startup-number {
+            left: 10px;
+            top: 8px;
+            font-size: 1.6rem;
+        }
+
+        .startup-card h3 {
+            font-size: 1.1rem;
+        }
+
+        .cms-title {
+            font-size: 1.5rem;
+        }
+
+        .status-legend {
+            gap: 8px;
+            padding: 8px 10px;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -364,6 +671,20 @@
                     <div class="legend-box exited"></div>
                     <span>Exited Startup</span>
                 </div>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar animate__animated animate__fadeIn">
+                <div class="filter-tabs">
+                    <button class="filter-tab active active-all" data-filter="all" onclick="setFilter('all')">All</button>
+                    <button class="filter-tab" data-filter="active" onclick="setFilter('active')">Active</button>
+                    <button class="filter-tab" data-filter="exited" onclick="setFilter('exited')">Exited</button>
+                </div>
+                <div class="filter-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search by name, domain, or industry..." oninput="filterCards()">
+                </div>
+                <span class="filter-count" id="filter-count"></span>
             </div>
 
             <div id="startup-container" class="startup-grid">
@@ -457,9 +778,18 @@
             }
         }
 
+        // Store all records globally for filtering
+        let allRecords = [];
+        let currentFilter = 'all';
+
         function renderCards(records) {
+            allRecords = records;
             const container = document.getElementById('startup-container');
             container.innerHTML = '';
+
+            const searchTerm = (document.getElementById('search-input').value || '').toLowerCase().trim();
+
+            let visibleCount = 0;
 
             records.forEach((fields, index) => {
                 // Mapping fields with even more fallbacks
@@ -475,22 +805,35 @@
                 const tag = fields['DOMAIN'] || fields['Industry'] || fields['Category'] || fields['Type'] || 'Innovation';
                 const website = fields['Website'] || fields['Link'] || '#';
 
+                const status = (fields['CURRENT STATUS'] || fields['Status'] || fields['STATUS'] || fields['Current Status'] || '').toUpperCase();
+                
+                // --- Filter by status ---
+                if (currentFilter === 'active' && !status.includes('ACTIVE')) return;
+                if (currentFilter === 'exited' && !status.includes('EXITED')) return;
+
+                // --- Filter by search term ---
+                if (searchTerm) {
+                    const searchableText = `${name} ${tag} ${description} ${status}`.toLowerCase();
+                    if (!searchableText.includes(searchTerm)) return;
+                }
+
+                visibleCount++;
+
                 const card = document.createElement('div');
                 card.className = 'startup-card animate__animated animate__fadeInUp';
                 // Add status class
-                const status = (fields['CURRENT STATUS'] || fields['Status'] || fields['STATUS'] || fields['Current Status'] || '').toUpperCase();
                 if (status.includes('ACTIVE')) {
                     card.classList.add('status-active');
                 } else if (status.includes('EXITED')) {
                     card.classList.add('status-exited');
                 }
-                card.style.animationDelay = `${index * 0.1}s`;
+                card.style.animationDelay = `${visibleCount * 0.08}s`;
 
                 // Stringify the record for the showDetails function, escaping quotes
                 const recordStr = JSON.stringify(fields).replace(/'/g, "&apos;").replace(/"/g, '&quot;');
 
                 card.innerHTML = `
-                    <div class="startup-number">${String(index + 1).padStart(2, '0')}</div>
+                    <div class="startup-number">${String(visibleCount).padStart(2, '0')}</div>
                     <div class="startup-tag">${tag}</div>
                     <h3>${name}</h3>
                     <div class="status-badge ${status.includes('ACTIVE') ? 'active' : 'exited'}">
@@ -506,6 +849,46 @@
 
                 container.appendChild(card);
             });
+
+            // Update count
+            const countEl = document.getElementById('filter-count');
+            if (countEl) {
+                const total = allRecords.filter(r => {
+                    const n = r['START UP NAME'] || r['Name'] || r['StartupName'] || r['Title'] || r['NAME'] || r['Startup'] || r['startup'] || r['Company'] || r['COMPANY'];
+                    return n && n !== 'START UP NAME' && n !== 'Untitled Startup';
+                }).length;
+                countEl.textContent = visibleCount === total ? `${total} startups` : `${visibleCount} of ${total} startups`;
+            }
+
+            // If no results, show a friendly message
+            if (visibleCount === 0) {
+                const emptyMsg = document.createElement('div');
+                emptyMsg.style.cssText = 'text-align:center;padding:60px 20px;color:#888;';
+                emptyMsg.innerHTML = `
+                    <i class="fas fa-search" style="font-size:2.5rem;opacity:0.3;margin-bottom:15px;display:block;"></i>
+                    <p style="font-size:1.1rem;font-weight:600;color:#666;">No startups found</p>
+                    <p style="font-size:0.85rem;margin-top:8px;">Try adjusting your filter or search term</p>
+                `;
+                container.appendChild(emptyMsg);
+            }
+        }
+
+        function setFilter(filter) {
+            currentFilter = filter;
+            // Update active tab styling
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.classList.remove('active', 'active-all', 'active-active', 'active-exited');
+                if (tab.dataset.filter === filter) {
+                    tab.classList.add('active', `active-${filter}`);
+                }
+            });
+            filterCards();
+        }
+
+        function filterCards() {
+            if (allRecords.length > 0) {
+                renderCards(allRecords);
+            }
         }
 
         function showDetails(fields) {

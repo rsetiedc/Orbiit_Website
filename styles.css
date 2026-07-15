@@ -1264,6 +1264,40 @@ main::before {
         gap: 20px;
     }
 
+    /* Startup card mobile fixes */
+    .startup-card {
+        padding: 25px;
+        padding-top: 55px;
+        padding-left: 25px;
+        min-height: auto;
+        gap: 8px;
+    }
+
+    .startup-number {
+        left: 15px;
+        top: 15px;
+        font-size: 2.5rem;
+    }
+
+    .startup-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 8px 8px 0px #333;
+    }
+
+    .startup-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .startup-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .startup-card .logo-placeholder {
+        height: 100px;
+    }
+
     .process-container {
         flex-direction: column;
     }
