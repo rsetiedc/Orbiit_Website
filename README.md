@@ -20,4 +20,3 @@ The official website for **ORBIIT** (Rajagiri Entrepreneurship & Innovation Deve
 - `assets/`: Media files and other static assets.
 
 
-The deployed link of this website is : https://rajagiriorbiit.netlify.app
